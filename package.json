@@ -1,0 +1,19 @@
+{
+  "name": "oc3_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Titouannx/OC3_OhMyFood.git"
+  },
+  "author": "T.Annaix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Titouannx/OC3_OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Titouannx/OC3_OhMyFood#readme"
+}
