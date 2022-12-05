@@ -5,8 +5,10 @@
 /**
  * Set up a decent box model on the root element
  */
+
 html {
   box-sizing: border-box;
+  background-color: $light-grey;
 }
 
 /**
@@ -25,7 +27,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
   @include on-event {

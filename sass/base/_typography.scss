@@ -3,5 +3,10 @@
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font: normal 125% / 1.4 $text-font;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
 }
