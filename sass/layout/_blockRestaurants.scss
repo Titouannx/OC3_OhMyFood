@@ -1,9 +1,87 @@
 .blockRestaurants{
     background-color: $extraLight-grey;
-    height: 615px;
     h1{
         margin: 0px;
-        padding: 30px 35px 0px 35px;
+        padding: 30px 0px 0px 35px;
     }
 
+
+
+    .cardsSection{
+
+        padding: 30px $padding-home;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__card{
+
+            box-shadow: 2px 4px 15px rgba($mid-grey, 0.5);
+            border-radius: 15px;
+
+            &__top{
+
+                display: flex;
+                justify-content: flex-end;
+                height: 200px;
+                width: 100%;
+
+                img{
+                    border-radius: 15px 15px 0px 0px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                h3{
+                    position: absolute;
+                    margin: 5%;
+                    color: darken($tertiaryColor,40);
+                    font-size: 15px;
+                    //margin: 5% 55%;
+                    background-color: $tertiaryColor;
+                    padding: 5px 10px;
+                    border-radius: 3px;
+                }
+
+                &--labelVisible{
+                    visibility: visible;
+                }
+
+                &--labelHidden{
+                    visibility: hidden;
+                }
+            }
+
+            &__bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 15px 10px;
+
+                &__left{
+                    
+                    h3{
+
+                    }
+
+                    p{
+
+                    }
+
+                }
+
+                &__right{
+
+                    margin: auto 5px;
+                    
+                    i{
+
+
+                        &:hover{
+                            color: linear-gradient(163deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
