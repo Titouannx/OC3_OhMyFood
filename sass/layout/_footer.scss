@@ -1,3 +1,36 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+footer{
+
+    background-color: $dark-grey;
+
+    padding: 30px;
+
+    .footer{
+
+        &__img{
+            color: white;
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        &__links{
+
+            p{
+                padding-bottom: 5px;
+            }
+
+            color: $light-grey;
+
+            &--bold{
+                font-weight: bold;
+                display: flex;
+
+                i{
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
