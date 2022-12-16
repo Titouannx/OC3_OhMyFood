@@ -102,8 +102,6 @@ a {
  */
 abbr[title] {
   border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -367,7 +365,6 @@ a {
 }
 a:hover, a:active, a:focus, a:focus-within {
   color: rgb(54, 54, 54);
-  text-decoration: underline;
 }
 
 /**
@@ -502,7 +499,7 @@ footer .footer__links--bold i {
 }
 .blockExplore p {
   color: rgb(68, 68, 68);
-  margin: 10px 0px 30px 0px;
+  margin: 10px 25px 30px 25px;
 }
 
 .blockFonctionnement {
@@ -605,7 +602,9 @@ footer .footer__links--bold i {
   margin: auto 5px;
 }
 .blockRestaurants .cardsSection__card__bottom__right i:hover {
-  color: linear-gradient(163deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .blockBackImg {
@@ -631,46 +630,62 @@ footer .footer__links--bold i {
   padding: 0px 35px;
   width: 100%;
 }
-.blockFrontMenu .infoResto div {
+.blockFrontMenu__button {
+  padding: 20px 0px 70px 0px;
+  text-align: center;
+  font-size: 25px;
+}
+.blockFrontMenu__button .gradientPurpleBtn {
+  padding: 20px 15%;
+}
+
+.infoResto div {
   margin: -40px 0 20px 0;
   padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
-.blockFrontMenu .infoResto div h1 {
+.infoResto div h1 {
   margin: 0px;
   font-family: "Shrikhand", cursive;
 }
-.blockFrontMenu .infoResto div i {
+.infoResto div i {
   margin: auto 0px;
   font-size: 150%;
 }
-.blockFrontMenu .sectionPlats {
+
+.sectionPlats {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
   gap: 15px;
 }
-.blockFrontMenu .sectionPlats__titreSection {
+.sectionPlats__titreSection {
   width: 15%;
   border-bottom: 5px solid #99E2D0;
 }
-.blockFrontMenu .sectionPlats__titreSection h2 {
+.sectionPlats__titreSection h2 {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 20px;
   color: rgb(68, 68, 68);
 }
-.blockFrontMenu .sectionPlats__platCard {
+.sectionPlats__platCard {
   box-shadow: 2px 4px 15px rgba(153, 153, 153, 0.5);
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
 }
-.blockFrontMenu .sectionPlats__platCard__right {
+.sectionPlats__platCard:hover .sectionPlats__platCard__right__i {
+  transform: scaleX(1);
+}
+.sectionPlats__platCard__left {
+  padding: 15px;
+}
+.sectionPlats__platCard__right {
   display: flex;
 }
-.blockFrontMenu .sectionPlats__platCard__right i {
+.sectionPlats__platCard__right i {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -679,22 +694,15 @@ footer .footer__links--bold i {
   background-color: #99E2D0;
   color: white;
   border-radius: 0px 15px 15px 0px;
+  transform-origin: 100% 0%;
+  transform: scaleX(0);
+  transition: transform 1000ms;
 }
-.blockFrontMenu .sectionPlats__platCard__right h3 {
+.sectionPlats__platCard__right h3 {
   display: flex;
   flex-direction: column-reverse;
   padding: 0px 15px 15px 0px;
-}
-.blockFrontMenu .sectionPlats__platCard__left {
-  padding: 15px;
-}
-.blockFrontMenu__button {
-  padding: 20px 0px 70px 0px;
-  text-align: center;
-  font-size: 25px;
-}
-.blockFrontMenu__button .gradientPurpleBtn {
-  padding: 20px 15%;
+  transform: translate(140%);
 }
 
 .gradientPurpleBtn {

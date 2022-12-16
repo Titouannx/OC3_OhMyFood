@@ -4,80 +4,6 @@
     padding: 0px $padding-home;
     width: 100%;
 
-    .infoResto{
-
-        div{
-            margin: -40px 0 20px 0;
-            padding-top: 40px;
-            display: flex;
-            justify-content: space-between;
-
-            h1{
-                margin: 0px;
-                font-family: $title-font;
-            }
-
-            i{
-                margin: auto 0px;
-                font-size: 150%;
-            }
-        }
-    }
-
-    .sectionPlats{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 50px;
-        gap: 15px;
-
-        &__titreSection{
-            h2{
-                font-weight: normal;
-                text-transform:uppercase;
-                font-size: 20px;
-                color: $dark-grey
-            }
-            width: 15%;
-            border-bottom: 5px solid $tertiaryColor;
-        }
-
-        &__platCard{
-
-            box-shadow: 2px 4px 15px rgba($mid-grey, 0.5);
-            border-radius: 15px;
-
-            display: flex;
-            justify-content: space-between;
-
-            &__right{
-                display: flex;
-
-                i{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 30px;
-                    font-size: 30px;
-                    background-color: $tertiaryColor;
-                    color: white;
-                    border-radius: 0px 15px 15px 0px;
-                }
-
-                h3{
-                    display: flex;
-                    flex-direction: column-reverse;
-                    padding: 0px 15px 15px 0px;
-                }
-                
-            }
-
-            &__left{
-                padding: 15px;
-
-            }
-        }
-    }
-    
     &__button{
         padding: 20px 0px 70px 0px;
         text-align: center;
@@ -85,6 +11,90 @@
 
         .gradientPurpleBtn{
             padding: 20px 15%;
+        }
+    }
+}
+
+.infoResto{
+
+    div{
+        margin: -40px 0 20px 0;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        h1{
+            margin: 0px;
+            font-family: $title-font;
+        }
+
+        i{
+            margin: auto 0px;
+            font-size: 150%;
+        }
+    }
+}
+
+.sectionPlats{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 15px;
+
+    &__titreSection{
+        h2{
+            font-weight: normal;
+            text-transform:uppercase;
+            font-size: 20px;
+            color: $dark-grey
+        }
+        width: 15%;
+        border-bottom: 5px solid $tertiaryColor;
+    }
+
+    &__platCard{
+
+        box-shadow: 2px 4px 15px rgba($mid-grey, 0.5);
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: space-between;
+
+        &:hover .sectionPlats__platCard__right__i{
+            transform: scaleX(1);
+        }
+
+        &__left{
+            padding: 15px;
+
+        }
+
+        &__right{
+            display: flex;
+
+            
+
+            i{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px;
+                font-size: 30px;
+                background-color: $tertiaryColor;
+                color: white;
+                border-radius: 0px 15px 15px 0px;
+                transform-origin: 100% 0%;
+                transform: scaleX(0);
+                transition: transform 1000ms;
+            }
+
+            h3{
+                display: flex;
+                flex-direction: column-reverse;
+                padding: 0px 15px 15px 0px;
+                transform: translate(140%);
+            }
+            
         }
     }
 }
