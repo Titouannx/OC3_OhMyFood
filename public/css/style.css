@@ -676,11 +676,15 @@ footer .footer__links--bold i {
   display: flex;
   justify-content: space-between;
 }
-.sectionPlats__platCard:hover .sectionPlats__platCard__right__i {
+.sectionPlats__platCard:hover .sectionPlats__platCard__right i {
   transform: scaleX(1);
+}
+.sectionPlats__platCard:hover .sectionPlats__platCard__right h3 {
+  transform: translateX(0px);
 }
 .sectionPlats__platCard__left {
   padding: 15px;
+  font-size: 15px;
 }
 .sectionPlats__platCard__right {
   display: flex;
@@ -689,20 +693,22 @@ footer .footer__links--bold i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 10px;
   font-size: 30px;
   background-color: #99E2D0;
   color: white;
   border-radius: 0px 15px 15px 0px;
   transform-origin: 100% 0%;
   transform: scaleX(0);
-  transition: transform 1000ms;
+  transition: transform 400ms;
 }
 .sectionPlats__platCard__right h3 {
   display: flex;
   flex-direction: column-reverse;
   padding: 0px 15px 15px 0px;
-  transform: translate(140%);
+  transform: translateX(50px);
+  transition: transform 400ms;
+  font-size: 20px;
 }
 
 .gradientPurpleBtn {
