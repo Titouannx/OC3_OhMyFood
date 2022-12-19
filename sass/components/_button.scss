@@ -10,3 +10,10 @@
     padding: 15px 25px;
     border-radius: 30px;
 }
+
+.gradientPurpleBtn:hover{
+    cursor: pointer;
+    background: linear-gradient(163deg, lighten(rgba(255,121,218,1), 2) 0%, lighten(rgba(147,86,220,1), 2) 100%);
+    box-shadow: 0px 0px 10px $dark-grey;
+    transition: 300ms;
+}

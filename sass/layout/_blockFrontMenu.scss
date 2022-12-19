@@ -1,3 +1,23 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    }
+    $animation-duration: 0.7s;
+    $easing: ease-in-out;
+
+    .fade-in-block {
+    opacity: 0;
+    animation: fadeIn $animation-duration $easing;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+    }
+
 .blockFrontMenu{
     border-radius: 40px;
     background-color: white;
@@ -62,7 +82,11 @@
 
         &:hover &__right {
             i{
-                transform: scaleX(1);
+                transform: scaleX(1) rotate(0turn);
+            }
+
+            div{
+                transform: scaleX(1) rotate(0turn);
             }
 
             h3{
@@ -74,13 +98,19 @@
         &__left{
             padding: 15px;
             font-size: 15px;
-
         }
 
         &__right{
             display: flex;
 
-            
+            div{
+                background-color: $tertiaryColor; 
+                transform-origin: 100% 0%;
+                transform: scaleX(0);
+                transition: transform 400ms;
+                border-radius: 0px 15px 15px 0px; 
+                padding: 10px;
+            }
 
             i{
                 display: flex;
@@ -88,19 +118,16 @@
                 justify-content: center;
                 padding: 10px;
                 font-size: 30px;
-                background-color: $tertiaryColor;
                 color: white;
-                border-radius: 0px 15px 15px 0px;
-                transform-origin: 100% 0%;
-                transform: scaleX(0);
-                transition: transform 400ms;
+                transform: scaleX(0) rotate(-2turn);
+                transition: transform 500ms;
             }
 
             h3{
                 display: flex;
                 flex-direction: column-reverse;
                 padding: 0px 15px 15px 0px;
-                transform: translateX(50px);
+                transform: translateX(70px);
                 transition: transform 400ms;
                 font-size: 20px;
             }

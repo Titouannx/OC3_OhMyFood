@@ -432,6 +432,50 @@ h1 {
   width: 1px;
 }
 
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+  text-align: center;
+}
+#loading-overlay .loading-message {
+  margin: 10px;
+  color: black;
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+.fade-out-overlay {
+  opacity: 1;
+  animation: fadeOut 3s cubic-bezier(1, -0.01, 1, -0.59);
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
 header div {
   display: flex;
   height: 70px;
@@ -601,7 +645,7 @@ footer .footer__links--bold i {
 .blockRestaurants .cardsSection__card__bottom__right {
   margin: auto 5px;
 }
-.blockRestaurants .cardsSection__card__bottom__right i:hover {
+.blockRestaurants .cardsSection__card__bottom__right i:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -622,6 +666,23 @@ footer .footer__links--bold i {
 }
 .blockBackImg__leDeliceDesSens {
   background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.fade-in-block {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
 }
 
 .blockFrontMenu {
@@ -677,7 +738,10 @@ footer .footer__links--bold i {
   justify-content: space-between;
 }
 .sectionPlats__platCard:hover .sectionPlats__platCard__right i {
-  transform: scaleX(1);
+  transform: scaleX(1) rotate(0turn);
+}
+.sectionPlats__platCard:hover .sectionPlats__platCard__right div {
+  transform: scaleX(1) rotate(0turn);
 }
 .sectionPlats__platCard:hover .sectionPlats__platCard__right h3 {
   transform: translateX(0px);
@@ -689,24 +753,29 @@ footer .footer__links--bold i {
 .sectionPlats__platCard__right {
   display: flex;
 }
+.sectionPlats__platCard__right div {
+  background-color: #99E2D0;
+  transform-origin: 100% 0%;
+  transform: scaleX(0);
+  transition: transform 400ms;
+  border-radius: 0px 15px 15px 0px;
+  padding: 10px;
+}
 .sectionPlats__platCard__right i {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px;
   font-size: 30px;
-  background-color: #99E2D0;
   color: white;
-  border-radius: 0px 15px 15px 0px;
-  transform-origin: 100% 0%;
-  transform: scaleX(0);
-  transition: transform 400ms;
+  transform: scaleX(0) rotate(-2turn);
+  transition: transform 500ms;
 }
 .sectionPlats__platCard__right h3 {
   display: flex;
   flex-direction: column-reverse;
   padding: 0px 15px 15px 0px;
-  transform: translateX(50px);
+  transform: translateX(70px);
   transition: transform 400ms;
   font-size: 20px;
 }
@@ -719,6 +788,13 @@ footer .footer__links--bold i {
   font-size: 85%;
   padding: 15px 25px;
   border-radius: 30px;
+}
+
+.gradientPurpleBtn:hover {
+  cursor: pointer;
+  background: linear-gradient(163deg, #ff83dd 0%, #985ede 100%);
+  box-shadow: 0px 0px 10px rgb(68, 68, 68);
+  transition: 300ms;
 }
 
 /*# sourceMappingURL=style.css.map */
