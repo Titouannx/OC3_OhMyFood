@@ -98,10 +98,15 @@
         &__left{
             padding: 15px;
             font-size: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            width: 300px;
         }
 
         &__right{
             display: flex;
+            padding-left: 20px;
 
             div{
                 background-color: $tertiaryColor; 

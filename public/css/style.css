@@ -749,9 +749,14 @@ footer .footer__links--bold i {
 .sectionPlats__platCard__left {
   padding: 15px;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 300px;
 }
 .sectionPlats__platCard__right {
   display: flex;
+  padding-left: 20px;
 }
 .sectionPlats__platCard__right div {
   background-color: #99E2D0;
