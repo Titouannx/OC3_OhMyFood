@@ -49,4 +49,23 @@
             }
         }
     }
+    
+}
+
+//TABLET
+@media (min-width: 769px) {
+
+    .blockFonctionnement{
+        h1{
+            text-align: center;
+        }
+
+        .cardsFonctionnement{
+            margin-top: 40px;
+            flex-direction: row;
+            justify-content:center;
+            gap: 50px;
+        }
+    }
+    
 }

@@ -463,7 +463,7 @@ h1 {
 }
 @keyframes fadeOut {
   from {
-    visibility: visible;
+    visibility: hidden;
   }
   to {
     visibility: hidden;
@@ -502,22 +502,31 @@ footer {
   padding: 30px;
 }
 footer .footer__img {
-  color: white;
+  filter: invert(1);
   width: 45%;
   margin-bottom: 20px;
 }
 footer .footer__links {
   color: rgb(237, 237, 237);
 }
+footer .footer__links a {
+  color: white;
+}
 footer .footer__links p {
   padding-bottom: 5px;
 }
-footer .footer__links--bold {
+footer .footer__links--bold a {
+  color: white;
   font-weight: bold;
   display: flex;
 }
-footer .footer__links--bold i {
+footer .footer__links--bold a i {
   width: 35px;
+}
+@media (min-width: 769px) {
+  footer .footer__img {
+    width: 25%;
+  }
 }
 
 .blockLocalisation {
@@ -544,6 +553,11 @@ footer .footer__links--bold i {
 .blockExplore p {
   color: rgb(68, 68, 68);
   margin: 10px 25px 30px 25px;
+}
+@media (min-width: 769px) {
+  .blockExplore {
+    height: 250px;
+  }
 }
 
 .blockFonctionnement {
@@ -594,6 +608,17 @@ footer .footer__links--bold i {
   color: #9356DC;
 }
 
+@media (min-width: 769px) {
+  .blockFonctionnement h1 {
+    text-align: center;
+  }
+  .blockFonctionnement .cardsFonctionnement {
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+}
 .blockRestaurants {
   background-color: rgb(250, 250, 250);
 }
@@ -651,6 +676,25 @@ footer .footer__links--bold i {
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 769px) {
+  .blockRestaurants .cardsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .blockRestaurants .cardsSection__card {
+    width: 300px;
+  }
+  .blockRestaurants .cardsSection__card__top h3 {
+    position: absolute;
+    margin: 2%;
+    color: #278870;
+    font-size: 15px;
+    background-color: #99E2D0;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+}
 .blockBackImg {
   height: 200px;
   background-size: cover;

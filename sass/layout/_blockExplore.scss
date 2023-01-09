@@ -10,4 +10,9 @@
         color: $dark-grey;
         margin: 10px 25px 30px 25px;
     }
+
+    //TABLET
+    @media (min-width: 769px) {
+        height: 250px;
+    }
 }

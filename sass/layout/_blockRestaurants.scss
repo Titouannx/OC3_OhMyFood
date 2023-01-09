@@ -5,8 +5,6 @@
         padding: 30px 0px 0px 35px;
     }
 
-
-
     .cardsSection{
 
         padding: 30px $padding-home;
@@ -80,6 +78,38 @@
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//TABLET
+@media (min-width: 769px) {
+
+    .blockRestaurants{
+
+        .cardsSection{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            //flex-wrap:wrap;
+
+            &__card{
+                width: 300px;
+
+                &__top{
+                    h3{
+                        position: absolute;
+                        margin: 2%;
+                        color: darken($tertiaryColor,40);
+                        font-size: 15px;
+                        //margin: 5% 55%;
+                        background-color: $tertiaryColor;
+                        padding: 5px 10px;
+                        border-radius: 3px;
                     }
                 }
             }

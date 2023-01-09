@@ -3,6 +3,8 @@
 // -----------------------------------------------------------------------------
 footer{
 
+    //MOBILE
+
     background-color: $dark-grey;
 
     padding: 30px;
@@ -10,12 +12,16 @@ footer{
     .footer{
 
         &__img{
-            color: white;
+            filter: invert(1);
             width: 45%;
             margin-bottom: 20px;
         }
 
         &__links{
+
+            a{
+                color: white;
+            }
 
             p{
                 padding-bottom: 5px;
@@ -23,13 +29,28 @@ footer{
 
             color: $light-grey;
 
-            &--bold{
+            &--bold a{
+                color: white;
                 font-weight: bold;
                 display: flex;
 
                 i{
                     width: 35px;
                 }
+            }
+        }
+    }
+
+    //DESKTOP
+    @media (min-width: 1200px) {
+
+    }
+
+    //TABLET
+    @media (min-width: 769px) {
+        .footer{
+            &__img{
+                width: 25%;
             }
         }
     }
