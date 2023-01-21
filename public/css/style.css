@@ -463,7 +463,7 @@ h1 {
 }
 @keyframes fadeOut {
   from {
-    visibility: hidden;
+    visibility: visible;
   }
   to {
     visibility: hidden;
@@ -670,7 +670,17 @@ footer .footer__links--bold a i {
 .blockRestaurants .cardsSection__card__bottom__right {
   margin: auto 5px;
 }
-.blockRestaurants .cardsSection__card__bottom__right i:active {
+.blockRestaurants .cardsSection__card__bottom__right .fa-regular {
+  display: block;
+}
+.blockRestaurants .cardsSection__card__bottom__right .fa-regular:hover {
+  display: none;
+}
+.blockRestaurants .cardsSection__card__bottom__right .fa-regular:hover + .fa-solid {
+  display: block;
+}
+.blockRestaurants .cardsSection__card__bottom__right .fa-solid {
+  display: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -758,6 +768,21 @@ footer .footer__links--bold a i {
   margin: auto 0px;
   font-size: 150%;
 }
+.infoResto div .fa-regular {
+  display: block;
+}
+.infoResto div .fa-regular:hover {
+  display: none;
+}
+.infoResto div .fa-regular:hover + .fa-solid {
+  display: block;
+}
+.infoResto div .fa-solid {
+  display: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .sectionPlats {
   display: flex;
@@ -793,14 +818,19 @@ footer .footer__links--bold a i {
 .sectionPlats__platCard__left {
   padding: 15px;
   font-size: 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   width: 300px;
+  overflow: hidden;
+}
+.sectionPlats__platCard__left p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sectionPlats__platCard__left h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .sectionPlats__platCard__right {
   display: flex;
-  padding-left: 20px;
 }
 .sectionPlats__platCard__right div {
   background-color: #99E2D0;

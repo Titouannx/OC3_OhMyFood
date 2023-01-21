@@ -52,6 +52,24 @@
             margin: auto 0px;
             font-size: 150%;
         }
+
+        .fa-regular{
+            display: block;
+            &:hover{
+                display: none;
+            }
+            
+            &:hover + .fa-solid{
+                display: block;
+            }
+        }
+
+        .fa-solid{
+                display: none;
+                background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+        }
     }
 }
 
@@ -98,15 +116,23 @@
         &__left{
             padding: 15px;
             font-size: 15px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow:ellipsis;
             width: 300px;
+            overflow: hidden;
+
+            p{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
+            }
+            h3{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
+            }
         }
 
         &__right{
             display: flex;
-            padding-left: 20px;
 
             div{
                 background-color: $tertiaryColor; 

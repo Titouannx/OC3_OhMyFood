@@ -71,13 +71,22 @@
 
                     margin: auto 5px;
                     
-                    i{
+                    .fa-regular{
+                        display: block;
+                        &:hover{
+                            display: none;
+                        }
                         
-                        &:active{
+                        &:hover + .fa-solid{
+                            display: block;
+                        }
+                    }
+
+                    .fa-solid{
+                            display: none;
                             background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
-                        }
                     }
                 }
             }
