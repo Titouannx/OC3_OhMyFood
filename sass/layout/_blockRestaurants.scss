@@ -35,7 +35,6 @@
                     margin: 5%;
                     color: darken($tertiaryColor,40);
                     font-size: 15px;
-                    //margin: 5% 55%;
                     background-color: $tertiaryColor;
                     padding: 5px 10px;
                     border-radius: 3px;
@@ -112,10 +111,9 @@
                 &__top{
                     h3{
                         position: absolute;
-                        margin: 2%;
+                        margin: 1%;
                         color: darken($tertiaryColor,40);
                         font-size: 15px;
-                        //margin: 5% 55%;
                         background-color: $tertiaryColor;
                         padding: 5px 10px;
                         border-radius: 3px;
