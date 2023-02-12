@@ -73,13 +73,7 @@
     }
 }
 
-.sectionPlats{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    gap: 15px;
-
-    &__titreSection{
+.titleSection{
         h2{
             font-weight: normal;
             text-transform:uppercase;
@@ -90,79 +84,96 @@
         border-bottom: 5px solid $tertiaryColor;
     }
 
-    &__platCard{
-
-        box-shadow: 2px 4px 15px rgba($mid-grey, 0.5);
-        border-radius: 15px;
-
+li.plat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    animation: appearence 2s ease;
+    box-shadow: 2px 4px 15px rgba($mid-grey, 0.5);
+    overflow: hidden;
+    
+    .desc {
         display: flex;
-        justify-content: space-between;
-
-        &:hover &__right {
-            i{
-                transform: scaleX(1) rotate(0turn);
-            }
-
-            div{
-                transform: scaleX(1) rotate(0turn);
-            }
-
-            h3{
-                transform: translateX(0px);
-            }
-        }
-        
-
-        &__left{
-            padding: 15px;
-            font-size: 15px;
-            width: 300px;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1% 0 2%;
+        overflow: hidden;
+        h3, .supAndPrice p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
-
-            p{
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                
+        }
+        h3 {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+        .supAndPrice {
+            display:flex;
+            justify-content: space-between;
+            p {
+            font-size: 12px;
             }
-            h3{
-                text-overflow: ellipsis;
+            .price {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 10px 0;
                 white-space: nowrap;
-                
             }
         }
+    }
+    .check {
+        width: 0px;
+        background: $tertiaryColor;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        padding: 5px 0;
+        transition: width 500ms;
+        overflow: hidden;
+    }
+    .checked {
+        display:flex;
+        justify-content: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 0px;
+        transition: width 500ms;
+    }
+    &:hover {
+        .check{
+            width: 80px;
+        }
+        .checked{
+            animation: rotate 0.8s;
+            width: 60px;
+        }
+    }
+}
 
-        &__right{
-            display: flex;
+//TABLET & DESKTOP
+@media (min-width: 960px) {
+    li.plat {
+    }
+    .menu{
+        padding: 0% 20%;
+        gap: 25%;
+    }
+    .infoResto{
+       margin: 0% 20%; 
+    }
 
-            div{
-                background-color: $tertiaryColor; 
-                transform-origin: 100% 0%;
-                transform: scaleX(0);
-                transition: transform 400ms;
-                border-radius: 0px 15px 15px 0px; 
-                padding: 10px;
-            }
+    .titleSection{
+        width: 5%;
+        border-bottom: 5px solid $tertiaryColor;
+    }
 
-            i{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 10px;
-                font-size: 30px;
-                color: white;
-                transform: scaleX(0) rotate(-2turn);
-                transition: transform 500ms;
-            }
+    .infoResto{
 
-            h3{
-                display: flex;
-                flex-direction: column-reverse;
-                padding: 0px 15px 15px 0px;
-                transform: translateX(70px);
-                transition: transform 400ms;
-                font-size: 20px;
-            }
-            
+        div{
+            justify-content: left;
+            gap: 20px;
         }
     }
 }

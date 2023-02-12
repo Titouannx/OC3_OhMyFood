@@ -784,81 +784,99 @@ footer .footer__links--bold a i {
   -webkit-text-fill-color: transparent;
 }
 
-.sectionPlats {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  gap: 15px;
-}
-.sectionPlats__titreSection {
+.titleSection {
   width: 15%;
   border-bottom: 5px solid #99E2D0;
 }
-.sectionPlats__titreSection h2 {
+.titleSection h2 {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 20px;
   color: rgb(68, 68, 68);
 }
-.sectionPlats__platCard {
+
+li.plat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  animation: appearence 2s ease;
   box-shadow: 2px 4px 15px rgba(153, 153, 153, 0.5);
-  border-radius: 15px;
+  overflow: hidden;
+}
+li.plat .desc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 1% 0 2%;
+  overflow: hidden;
+}
+li.plat .desc h3, li.plat .desc .supAndPrice p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+li.plat .desc h3 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+li.plat .desc .supAndPrice {
   display: flex;
   justify-content: space-between;
 }
-.sectionPlats__platCard:hover .sectionPlats__platCard__right i {
-  transform: scaleX(1) rotate(0turn);
+li.plat .desc .supAndPrice p {
+  font-size: 12px;
 }
-.sectionPlats__platCard:hover .sectionPlats__platCard__right div {
-  transform: scaleX(1) rotate(0turn);
+li.plat .desc .supAndPrice .price {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  white-space: nowrap;
 }
-.sectionPlats__platCard:hover .sectionPlats__platCard__right h3 {
-  transform: translateX(0px);
-}
-.sectionPlats__platCard__left {
-  padding: 15px;
-  font-size: 15px;
-  width: 300px;
+li.plat .check {
+  width: 0px;
+  background: #99E2D0;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  padding: 5px 0;
+  transition: width 500ms;
   overflow: hidden;
 }
-.sectionPlats__platCard__left p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.sectionPlats__platCard__left h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.sectionPlats__platCard__right {
+li.plat .checked {
   display: flex;
-}
-.sectionPlats__platCard__right div {
-  background-color: #99E2D0;
-  transform-origin: 100% 0%;
-  transform: scaleX(0);
-  transition: transform 400ms;
-  border-radius: 0px 15px 15px 0px;
-  padding: 10px;
-}
-.sectionPlats__platCard__right i {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  font-size: 30px;
-  color: white;
-  transform: scaleX(0) rotate(-2turn);
-  transition: transform 500ms;
-}
-.sectionPlats__platCard__right h3 {
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 0px 15px 15px 0px;
-  transform: translateX(70px);
-  transition: transform 400ms;
   font-size: 20px;
+  padding: 20px;
+  width: 0px;
+  transition: width 500ms;
+}
+li.plat:hover .check {
+  width: 80px;
+}
+li.plat:hover .checked {
+  animation: rotate 0.8s;
+  width: 60px;
 }
 
+@media (min-width: 960px) {
+  .menu {
+    padding: 0% 20%;
+    gap: 25%;
+  }
+  .infoResto {
+    margin: 0% 20%;
+  }
+  .titleSection {
+    width: 5%;
+    border-bottom: 5px solid #99E2D0;
+  }
+  .infoResto div {
+    justify-content: left;
+    gap: 20px;
+  }
+}
 .gradientPurpleBtn {
   color: white;
   border: 0px;
