@@ -443,6 +443,7 @@ h1 {
   text-align: center;
 }
 #loading-overlay .loading-message {
+  display: none;
   margin: 10px;
   color: black;
   font-family: "Shrikhand", cursive;
@@ -476,6 +477,26 @@ h1 {
   animation-delay: 0s;
 }
 
+.loader {
+  width: 100px;
+  height: 100px;
+  margin-top: 300px;
+  border: 5px solid black;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header div {
   display: flex;
   height: 70px;
@@ -546,7 +567,7 @@ footer .footer__links--bold a i {
   text-align: center;
   height: 315px;
 }
-.blockExplore h1 {
+.blockExplore h2 {
   margin: 0px;
   padding: 30px 35px 0px 35px;
 }
@@ -622,7 +643,7 @@ footer .footer__links--bold a i {
 .blockRestaurants {
   background-color: rgb(250, 250, 250);
 }
-.blockRestaurants h1 {
+.blockRestaurants h2 {
   margin: 0px;
   padding: 30px 0px 0px 35px;
 }
@@ -791,7 +812,7 @@ footer .footer__links--bold a i {
 .titleSection h2 {
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 22px;
   color: rgb(68, 68, 68);
 }
 
@@ -819,7 +840,7 @@ li.plat .desc h3, li.plat .desc .supAndPrice p {
   overflow: hidden;
 }
 li.plat .desc h3 {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 0px;
 }
 li.plat .desc .supAndPrice {
@@ -827,10 +848,10 @@ li.plat .desc .supAndPrice {
   justify-content: space-between;
 }
 li.plat .desc .supAndPrice p {
-  font-size: 12px;
+  font-size: 15px;
 }
 li.plat .desc .supAndPrice .price {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin: 10px 0;
   white-space: nowrap;
@@ -850,14 +871,15 @@ li.plat .checked {
   font-size: 20px;
   padding: 20px;
   width: 0px;
-  transition: width 500ms;
+  transform: rotate(0deg);
+  transition: transform 500ms, width 500ms;
 }
 li.plat:hover .check {
   width: 80px;
 }
 li.plat:hover .checked {
-  animation: rotate 0.8s;
   width: 60px;
+  transform: rotate(-360deg);
 }
 
 @media (min-width: 960px) {

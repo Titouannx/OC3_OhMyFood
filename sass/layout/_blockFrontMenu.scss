@@ -77,7 +77,7 @@
         h2{
             font-weight: normal;
             text-transform:uppercase;
-            font-size: 20px;
+            font-size: 22px;
             color: $dark-grey
         }
         width: 15%;
@@ -107,17 +107,17 @@ li.plat {
             overflow: hidden;
         }
         h3 {
-            font-size: 15px;
+            font-size: 20px;
             margin-bottom: 0px;
         }
         .supAndPrice {
             display:flex;
             justify-content: space-between;
             p {
-            font-size: 12px;
+            font-size: 15px;
             }
             .price {
-                font-size: 14px;
+                font-size: 15px;
                 font-weight: bold;
                 margin: 10px 0;
                 white-space: nowrap;
@@ -139,15 +139,16 @@ li.plat {
         font-size: 20px;
         padding: 20px;
         width: 0px;
-        transition: width 500ms;
+        transform: rotate(0deg);
+        transition: transform 500ms, width 500ms;
     }
     &:hover {
         .check{
             width: 80px;
         }
         .checked{
-            animation: rotate 0.8s;
             width: 60px;
+            transform: rotate(-360deg);
         }
     }
 }
