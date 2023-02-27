@@ -5,8 +5,14 @@
     padding: 25px;
     gap: 15px;
     color: $dark-grey;
+    margin-left: 80px;
 
-    h4{
+    input{
+        background: transparent;
+        border: none;
+        font-family: $text-font;
+        font-weight: bold;
         margin: 0px;
+        color: $dark-grey;
     }
 }

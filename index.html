@@ -17,13 +17,18 @@
     </div>
     <header>
       <div>
-        <img src="public/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+        <a href="../index.html">
+          <i class="fa-solid fa-arrow-left hidden"></i>
+        </a>
+        <img src="../public/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
       </div>
     </header>
     <main>
       <div class="blockLocalisation">
+        <form>
         <i class="fa-solid fa-location-dot" id="iconLoc"></i>
-        <h4>Paris, Belleville</h4>
+        <input type="text" value="Paris, Belleville">
+        </form>
       </div>
       <div class="blockExplore">
         <h2>Réservez le menu qui vous convient</h2>
@@ -43,7 +48,7 @@
             <i class="fa-solid fa-list"></i>
             <h3>Composez votre menu</h3>
           </div>
-          <div class="cardsFonctionnement__step cardsFonctionnement__step--lightPurple">
+          <div class="cardsFonctionnement__step">
             <p>3</p>
             <i class="fa-sharp fa-solid fa-store"></i>
             <h3>Dégustez au restaurant</h3>
@@ -56,7 +61,7 @@
           <div class="cardsSection__card">
             <a href="html/laPaletteDuGout.html">
               <div class="cardsSection__card__top">
-                <h3 class="cardsSection__card__top--labelVisible">Nouveau</h3>
+                <p class="cardsSection__card__top--labelVisible">Nouveau</p>
                 <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du restaurant La Palette du Gout">
               </div>
               <div class="cardsSection__card__bottom">
@@ -65,8 +70,8 @@
                   <p>Ménilmontant</p>
                 </div>
                 <div class="cardsSection__card__bottom__right">
-                  <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart"></i>
+                  <i class="fa-regular fa-heart"></i>
                 </div>
               </div>
             </a>
@@ -74,7 +79,7 @@
           <div class="cardsSection__card">
             <a href="html/laNoteEnchantee.html">
               <div class="cardsSection__card__top">
-                <h3 class="cardsSection__card__top--labelVisible">Nouveau</h3>
+                <p class="cardsSection__card__top--labelVisible">Nouveau</p>
                 <img src="public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du restaurant La Note du Enchantée">
               </div>
               <div class="cardsSection__card__bottom">
@@ -83,8 +88,8 @@
                   <p>Charonne</p>
                 </div>
                 <div class="cardsSection__card__bottom__right">
-                  <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart"></i>
+                  <i class="fa-regular fa-heart"></i>
                 </div>
               </div>
             </a>
@@ -92,7 +97,7 @@
           <div class="cardsSection__card">
             <a href="html/aLaFrancaise.html">
               <div class="cardsSection__card__top">
-                <h3 class="cardsSection__card__top--labelHidden">Nouveau</h3>
+                <p class="cardsSection__card__top--labelHidden">Nouveau</p>
                 <img src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image du restaurant A la Française">
               </div>
               <div class="cardsSection__card__bottom">
@@ -101,8 +106,8 @@
                   <p>Cité rouge</p>
                 </div>
                 <div class="cardsSection__card__bottom__right">
-                  <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart"></i>
+                  <i class="fa-regular fa-heart"></i>
                 </div>
               </div>
             </a>
@@ -110,7 +115,7 @@
           <div class="cardsSection__card">
             <a href="html/leDeliceDesSens.html">
               <div class="cardsSection__card__top">
-                <h3 class="cardsSection__card__top--labelHidden">Nouveau</h3>
+                <p class="cardsSection__card__top--labelHidden">Nouveau</p>
                 <img src="public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du restaurant Le délice des sens">
               </div>
               <div class="cardsSection__card__bottom">
@@ -119,8 +124,10 @@
                   <p>Folie-Méricourt</p>
                 </div>
                 <div class="cardsSection__card__bottom__right">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
+                  <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
                 </div>
               </div>
             </a>

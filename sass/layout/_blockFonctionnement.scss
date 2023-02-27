@@ -7,6 +7,7 @@
         flex-direction: column;
         gap: 30px;
         &__step{
+            cursor: pointer;
             gap: 10px;
             display: flex;
             flex-direction: row;
@@ -15,6 +16,7 @@
             padding: 15px 10px;
             background: $light-grey;
             position: relative;
+            transition: 300ms;
 
             p{
                 width: 20px;
@@ -40,7 +42,7 @@
                 font-size: 20px;
             }
 
-            &--lightPurple{
+            &:hover{
                 background: rgba($primaryColor, 0.2);
 
                 i{
