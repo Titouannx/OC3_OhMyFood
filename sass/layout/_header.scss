@@ -17,6 +17,16 @@ header{
             
         }
         
+        h1{
+            font-family: $title-font;
+            font-weight: lighter;
+            color: black;
+            padding: 10px 0px 10px 0px;
+            display: block;
+            margin: 0px auto;
+            font-size: 43px;
+        }
+        
         .hidden{
             display: none;
         }

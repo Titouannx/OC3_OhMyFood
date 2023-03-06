@@ -156,7 +156,7 @@ li.plat {
         font-size: 20px;
         padding: 20px;
         width: 0px;
-        transform: rotate(0deg);
+        transform: rotate(360deg);
         transition: transform 500ms, width 500ms;
     }
     &:hover {

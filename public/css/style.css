@@ -509,6 +509,15 @@ header div i {
   color: black;
   font-size: 125%;
 }
+header div h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  color: black;
+  padding: 10px 0px 10px 0px;
+  display: block;
+  margin: 0px auto;
+  font-size: 43px;
+}
 header div .hidden {
   display: none;
 }
@@ -546,7 +555,7 @@ footer .footer__links--bold a i {
 }
 @media (min-width: 769px) {
   footer .footer__img {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -903,7 +912,7 @@ li.plat .checked {
   font-size: 20px;
   padding: 20px;
   width: 0px;
-  transform: rotate(0deg);
+  transform: rotate(360deg);
   transition: transform 500ms, width 500ms;
 }
 li.plat:hover .check {
